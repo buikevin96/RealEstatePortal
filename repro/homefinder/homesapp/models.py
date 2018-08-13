@@ -15,6 +15,13 @@ class Property(models.Model):
     property_name = models.CharField(max_length = 200)
     area = models.CharField(max_length = 200)
 
+    age = models.CharField(max_length = 200)
+    price = models.CharField(max_length = 200)
+    direction = models.CharField(max_length = 200)
+    floor = models.CharField(max_length = 200)
+    postadd = models.CharField(max_length = 200)
+    image_url = models.CharField(max_length = 500)
+
     def __str__(self):
         return self.property_name
 
