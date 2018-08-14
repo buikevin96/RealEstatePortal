@@ -81,6 +81,22 @@
                                                 {{property.postadd}}
                                             </td>
                                         </tr>
+                                        <tr>
+                                            <td>
+                                                <label><b>Latitude</b></label>
+                                            </td>
+                                            <td>
+                                                {{property.lat_field}}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label><b>Longitude</b></label>
+                                            </td>
+                                            <td>
+                                                {{property.long_field}}
+                                            </td>
+                                        </tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -100,7 +116,7 @@
                 // Initialize and add the map
                 function initMap() {
                     // The location of Uluru
-                    var uluru = {lat: 40.762459, lng: -73.973791};
+                    var uluru = {lat: {{property.lat_field}}, lng: {{property.long_field}}};
                     // The map, centered at Uluru
                     var map = new google.maps.Map(
                         document.getElementById('map'), {zoom: 15, center: uluru});
